@@ -1,0 +1,5 @@
+# Usage: docker-ssh <Docker container ID/name>
+
+docker-ssh() {
+  docker exec -i -t $1 bash
+}
