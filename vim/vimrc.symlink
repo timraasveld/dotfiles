@@ -2,3 +2,49 @@ syntax on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+set runtimepath ^=~/.dotfiles/vim
+
+set pastetoggle=<F10>
+
+set wildmenu
+set wildmode=longest,list
+set wildignore+=*.so,*.swp,*.zip
+inoremap <Tab> <C-X><C-F>
+
+set noswapfile
+
+call pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
+nnoremap <F5> :GundoToggle<CR>
+
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+:let g:html_indent_inctags="body,head"
+"--------------------
+" Function: Open tag under cursor in new tab
+" Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
+"--------------------
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"--------------------
+" Function: Remap keys to make it more similar to firefox tab functionality
+" Purpose:  Because I am familiar with firefox tab functionality
+"--------------------
+map     <C-T>       :tabnew<CR>
+map     <C-N>       :!gvim &<CR><CR>
+
+" Easy buffer-switching with ALT+arrow keys
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+
+" Sudo-save
+command W w !sudo tee % > /dev/null
