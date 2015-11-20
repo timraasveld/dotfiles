@@ -1,0 +1,9 @@
+#!/bin/zsh
+ks() {
+  if [ $# -eq 1 ]; then
+    PORT=$1
+  else
+    PORT=3000
+  fi
+  lsof -P | grep ":$PORT" | awk '{print $2}' | xargs kill -9
+}
