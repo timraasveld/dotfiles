@@ -1,0 +1,11 @@
+#!/bin/zsh
+function s() { 
+  ks;
+  if [ -z "$1" ]
+  then
+      rails server -d -b 0.0.0.0;
+  else
+    rails server -d -b 0.0.0.0 -p $1;
+  fi
+}
+
