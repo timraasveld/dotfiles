@@ -39,3 +39,4 @@ do
 done
 
 unset config_files
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
