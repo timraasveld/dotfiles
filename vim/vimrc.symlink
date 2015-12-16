@@ -43,6 +43,11 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 nmap <C-L> :set number!<CR>
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 nmap <F5> :NERDTreeToggle %<CR>
 nmap s :Ack --ignore-dir=tmp --ignore-dir=log 
