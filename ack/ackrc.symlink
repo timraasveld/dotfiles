@@ -1,0 +1,3 @@
+--ignore-dir=log/
+--ignore-dir=spec/internal/tmp
+--ignore-dir=tmp
