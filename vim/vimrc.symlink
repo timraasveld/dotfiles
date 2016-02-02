@@ -13,6 +13,7 @@ set wildignore+=*.so,*.swp,*.zip
 inoremap <Tab> <C-X><C-F>
 
 set noswapfile
+set mouse=a "Enable scrolling on OSX
 
 call pathogen#infect()
 
@@ -55,8 +56,14 @@ nmap ga <Plug>(EasyAlign)
 
 map <Leader> <Plug>(easymotion-prefix)
 
+" Prevent accidentally closing vim with ctrl-C
+map ^C esc
+
 nmap <F5> :NERDTreeToggle %<CR>
 nmap s :Ack --ignore-dir=tmp --ignore-dir=log 
+
+" Show column and line number
+set ruler
 
 " Sudo-save
 command W w !sudo tee % > /dev/null
