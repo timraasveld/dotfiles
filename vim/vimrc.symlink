@@ -60,10 +60,13 @@ map <Leader> <Plug>(easymotion-prefix)
 map ^C esc
 
 nmap <F5> :NERDTreeToggle %<CR>
-nmap s :Ack --ignore-dir=tmp --ignore-dir=log 
+nmap s :Ack --ignore-dir=tmp --ignore-dir=log
 
 " Show column and line number
 set ruler
+
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:50,results:50'
 
 " Sudo-save
 command W w !sudo tee % > /dev/null
