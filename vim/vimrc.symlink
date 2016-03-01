@@ -62,6 +62,8 @@ map ^C esc
 nmap <F5> :NERDTreeToggle %<CR>
 nmap s :Ack --ignore-dir=tmp --ignore-dir=log
 
+set backspace=2
+
 " Show column and line number
 set ruler
 
