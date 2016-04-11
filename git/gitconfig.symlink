@@ -1,0 +1,56 @@
+[hub]
+	protocol = https
+[user]
+	name = timraasveld
+	email = ttimitri@gmail.com
+[credential]
+	helper = osxkeychain
+[alias]
+	co = checkout
+	promote = !$ZSH/bin/git-promote
+	wtf     = !$ZSH/bin/git-wtf
+	rank-contributors = !$ZSH/bin/git-rank-contributors
+	count   = !git shortlog -sn
+	p = pull --rebase --tags --prune
+	co = checkout
+	ca = commit -a
+	cm = commit -m
+	s  = status
+	ds = diff --name-only
+	ba = branch -a
+	cp = cherry-pick
+	cpp= !git cherry-pick $1; git push
+	ffpull= flow feature pull origin
+	ffpush= flow feature publish
+	d = diff --color-words
+	dh = diff head
+	l = log --graph
+	rd = reflow deliver --skip-lgtm
+	b = blame -w M
+	authors = log --format='%aN <%cE>'
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[apply]
+	whitespace = nowarn
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[pull]
+	rebase = true
+[github]
+	site = https://github.com
+	endpoint = https://api.github.com
+	oauth-token = 90ad0cd238c60e18f2904eb7b3cb332c80c226fb
+[reflow]
+	git-server = GitHub
