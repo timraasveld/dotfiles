@@ -28,6 +28,7 @@
 	rd = reflow deliver --skip-lgtm
 	b = blame -w M
 	authors = log --format='%aN <%cE>'
+	add-commit = !git add -A && git commit
 [color]
 	diff = auto
 	status = auto
@@ -51,6 +52,5 @@
 [github]
 	site = https://github.com
 	endpoint = https://api.github.com
-	oauth-token = 90ad0cd238c60e18f2904eb7b3cb332c80c226fb
 [reflow]
 	git-server = GitHub
