@@ -55,3 +55,5 @@
 	oauth-token = 
 [reflow]
 	git-server = GitHub
+[include]
+	path = ~/.gitconfig.reflow

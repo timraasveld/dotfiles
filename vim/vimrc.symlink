@@ -17,7 +17,6 @@ set mouse=a "Enable scrolling on OSX
 
 call pathogen#infect()
 
-syntax on
 filetype plugin indent on
 
 set smartindent
