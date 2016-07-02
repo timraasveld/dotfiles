@@ -1,0 +1,19 @@
+#!/bin/bash
+CONTRIBUTE_DIRECTORY=~/projects
+PROJECT_NAME=$1
+if ! [ -z $2 ]
+then
+  BRANCH_NAME=$2
+fi
+
+mkdir -p $CONTRIBUTE_DIRECTORY
+cd $CONTRIBUTE_DIRECTORY
+
+hub clone "$PROJECT_NAME"
+
+cd $PROJECT_NAME
+
+if ! [ -z $BRANCH_NAME ]
+then
+  git-reflow start $BRANCH_NAME
+fi
