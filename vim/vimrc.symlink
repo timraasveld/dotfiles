@@ -63,7 +63,7 @@ map ^C esc
 
 nmap <F5> :NERDTreeToggle %<CR>
 nmap s :Ack --ignore-file='match:translations.js' --ignore-file='match:tags' --ignore-dir=.idea --ignore-dir=tmp --ignore-dir=log 
-nmap T :Tagbar
+nmap T :Tagbar<CR>
 
 set backspace=2
 
