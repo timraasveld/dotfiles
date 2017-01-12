@@ -56,6 +56,8 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+nmap <Tab> :TlistToggle<CR>
+
 map <Leader> <Plug>(easymotion-prefix)
 
 " Prevent accidentally closing vim with ctrl-C
@@ -70,7 +72,8 @@ set backspace=2
 " Show column and line number
 set ruler
 
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:50,results:50'
+let g:ctrlp_match_window = 'results:50'
+let g:ctrlp_show_hidden = 1
 
 " Sudo-save
 command W w !sudo tee % > /dev/null
