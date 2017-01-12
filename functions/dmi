@@ -1,0 +1,8 @@
+#!/bin/sh
+# Initialize docker-machine "default" and configure environment variables,
+# allowing the "docker" command to use the machine.
+
+dmi() {
+  docker-machine start default
+  eval $(docker-machine env default)
+}
