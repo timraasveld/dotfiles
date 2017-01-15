@@ -13,7 +13,7 @@ set wildignore+=*.so,*.swp,*.zip
 inoremap <Tab> <C-X><C-F>
 
 set noswapfile
-set mouse=a "Enable scrolling on OSX
+set mouse=nicr "Enable scrolling on OSX
 
 call pathogen#infect()
 
