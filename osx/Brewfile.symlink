@@ -28,6 +28,7 @@ brew 'python3'
 brew 'grc'
 brew 'libtool'
 brew 'libyaml'
+brew 'mysql', restart_service: true
 brew 'openssl@1.1'
 brew 'pcre'
 brew 'nginx', args: ['with-passenger'], restart_service: true
@@ -35,6 +36,7 @@ brew 'passenger'
 brew 'perl'
 brew 'pkg-config'
 brew 'python'
+brew 'postgresql', restart_service: true
 brew 'ruby'
 brew 'spark'
 brew 'vim'
