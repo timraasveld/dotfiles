@@ -152,5 +152,10 @@ then
   fi
 fi
 
+info "Setting default shell to zsh"
+echo ''
+chsh -s $(which zsh)
+success "default shell set to zsh"
+
 echo ''
 echo '  All installed!'
