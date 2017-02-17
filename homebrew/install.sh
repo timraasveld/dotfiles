@@ -13,6 +13,12 @@ then
 fi
 
 # Install homebrew packages
-brew bundle --global
+info "Installing Homebrew bundle"
+if brew bundle --global
+then
+  success "Installed Homebrew bundle"
+else
+  fail "Error installing Homebrew bundle"
+fi
 
 exit 0
