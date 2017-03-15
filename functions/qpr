@@ -1,0 +1,9 @@
+# create a quick pull request based on some changes on master.
+# $1: branch name
+# $2: commit message and PR title
+qpr() {
+  git-reflow start "$1"
+  git add -A
+  git commit -m "$2"
+  git-reflow review -t "$2"
+}
