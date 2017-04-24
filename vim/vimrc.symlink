@@ -76,6 +76,11 @@ set ruler
 
 let g:ctrlp_match_window = 'results:50'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '.*node_modules.*',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " Sudo-save
 command W w !sudo tee % > /dev/null
@@ -98,5 +103,9 @@ function TrimSpaces() range
 endfunction
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
-execute pathogen#infect()
 call pathogen#helptags()
+
+" Case-insensitive by default, but case-sensitive if search contains capitals
+set smartcase
+
+au BufNewFile,BufRead *.ts set filetype=javascript
