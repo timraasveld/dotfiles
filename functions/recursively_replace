@@ -1,0 +1,5 @@
+#!/bin/sh
+# Recursively replaces all occurrences of a string in the current directory
+recursively_replace() {
+  ack -l "$1" | xargs sed -i "" "s/$1/$2/g"
+}
