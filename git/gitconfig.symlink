@@ -22,7 +22,7 @@
 	cpp= !git cherry-pick $1; git push
 	ffpull= flow feature pull origin
 	ffpush= flow feature publish
-	d = diff --color-words
+	d = diff
 	dh = diff head
 	l = log --graph
 	rd = reflow deliver --skip-lgtm
