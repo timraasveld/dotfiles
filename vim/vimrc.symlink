@@ -80,10 +80,10 @@ set hlsearch
 let g:ctrlp_match_window = 'results:50'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '.*node_modules.*',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'dir':  '\v(node_modules|\.git|ftp_home|tmp)',
+  \ 'file': '\v\.(exe|so|dll|DS_Store|keep)$',
   \ }
-:let g:ctrlp_max_files=2000000
+:let g:ctrlp_max_files=10000
 
 " Sudo-save
 command W w !sudo tee % > /dev/null
