@@ -16,11 +16,10 @@ alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias current_git_branch='$git checkout master $()'
 alias mim='merge_current_branch_into_master'
 
 current_git_branch() {
-  git branch | grep \* | cut -d ' ' -f2
+  return git branch | grep \* | cut -d ' ' -f2
 }
 
 merge_current_branch_into_master() {
