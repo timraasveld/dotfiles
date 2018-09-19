@@ -18,13 +18,11 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias mim='merge_current_branch_into_master'
 
-current_git_branch() {
-  return git branch | grep \* | cut -d ' ' -f2
-}
-
 merge_current_branch_into_master() {
+  current_branch=$(git branch | grep \* | cut -d ' ' -f2)
   git checkout master
-  git merge $(current_git_branch)
+  git merge --squash master $current_branch
+  git commit
 }
 
 tub(){ # Temporarily use branch, default master
