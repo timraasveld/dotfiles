@@ -1,3 +1,9 @@
---ignore-dir=log/
 --ignore-dir=spec/internal/tmp
+-ignore-file='match:translations.js'
+--ignore-file='match:tags'
+--ignore-dir=.idea
 --ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=node_modules
+--ignore-file=match:'package-lock.json'
+--ignore-dir='build'
