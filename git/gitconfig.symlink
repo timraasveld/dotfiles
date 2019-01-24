@@ -29,6 +29,7 @@
 	b = blame -w M
 	authors = log --format='%aN <%cE>'
 	add-commit = !git add -A && git commit
+  pu = ![[ $(git config \"branch.$(git rev-parse --abbrev-ref HEAD).merge\") = '' ]] && git push -u || git push
 [color]
 	diff = auto
 	status = auto
